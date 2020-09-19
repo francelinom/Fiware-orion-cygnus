@@ -1,0 +1,98 @@
+{
+ "id":"urn:ngsi-ld:Region:001", 
+    "type":"Region",
+    "name":{
+          "type":"Text", 
+          "value":"Predio Informatica"
+    },
+    "location": {
+            "type": "geo:json",
+            "value": {
+                "type": "Point",
+                "coordinates": [
+                    -35.363729596138,
+                 -5.8865338037919885
+                ]
+            }    
+    }
+}
+
+{
+ "id":"urn:ngsi-ld:Node:001", 
+    "type":"Node",
+    "name":{
+          "type":"Text", 
+          "value":"Node 1"
+    },
+    "location": {
+            "type": "geo:json",
+            "value": {
+                "type": "Point",
+                "coordinates": [
+                    -35.36349892616272,
+                 -5.88667787931516
+                ]
+            }
+    }
+}
+
+{
+    "id":"urn:ngsi-ld:Sensor:001", 
+    "type":"Sensor",
+    "name":{
+          "type":"Text", 
+          "value":"Sensor 1"
+    },
+    "location": {
+            "type": "geo:json",
+            "value": {
+                "type": "Point",
+                "coordinates": [
+                   -35.36349892616272,
+                 -5.886645862535457
+
+                ]
+            }
+    },
+    "refNode": {
+        "type": "Relationship",
+        "value": "urn:ngsi-ld:Node:001"
+    }
+}
+
+{
+  "id": "urn:ngsi-ld:Temperatura:001",
+  "type": "Temperatura",
+  "name": {
+    "type": "Text",
+    "value": "Temperatura"
+  },
+  "temp": {
+    "type": "Float",
+    "value": "23.10"
+  },
+  "refSensor": {
+    "type": "Relationship",
+    "value": "urn:ngsi-ld:Sensor:001"
+  }
+}
+
+{
+  "id": "urn:ngsi-ld:Luminosidade:001",
+  "type": "Luminosidade",
+  "name": {
+     "type": "Text",
+     "value": "Luminosidade",
+     "metadata": {}
+  },
+  "refSensor": {
+       "type": "Relationship",
+       "value": "urn:ngsi-ld:Sensor:002",
+       "metadata": {}
+  },
+  "luminosidade": {
+      "type": "Int",
+      "value": "1023",
+      "metadata": {}
+  }
+}
